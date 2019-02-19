@@ -32,9 +32,9 @@ public class TestBase {
     }
 
     @AfterMethod
-    public void afterMethod(Method method) {
+   public void afterMethod(Method method, ITestResult result) {
         System.out.println(" afterMethod() ");
-        if(method.getName()!=null)
+        if(ITestResult.FAILURE==result.getStatus())
         ReusableFunctions.captureScreenShot(driver,method.getName());
         else driverManager.quitDriver();
 
