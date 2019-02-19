@@ -37,47 +37,56 @@ public class SwagLabsPageElements {
 
 
     public void checkBackPackAvailable() {
+        
 
-        backPack_Desc_ID.isDisplayed();
-        System.out.println("backPack_Desc_ID.getAttribute(\"innerText\")"+backPack_Desc_ID.getAttribute("innerText"));
-        Assert.assertEquals("Sauce Labs Backpack",backPack_Desc_ID.getAttribute("innerText"));
+        if(backPack_Desc_ID.isDisplayed()) {
+            System.out.println("Desc Available" + backPack_Desc_ID.getAttribute("innerText"));
+            Assert.assertEquals("Sauce Labs Backpack",backPack_Desc_ID.getAttribute("innerText"));
+        } else System.out.println("Sauce Labs Backpack is not Available");
 
     }
 
     public void AddtoCart_BackPack() {
 
-        AddtoCart_BackPackID1.isDisplayed();
-        AddtoCart_BackPackID1.isEnabled();
-        AddtoCart_BackPackID1.click();
+        
+        if (AddtoCart_BackPackID1.isDisplayed() && AddtoCart_BackPackID1.isEnabled()){
+            AddtoCart_BackPackID1.click();}
+        else System.out.println("Not able to add Sauce Labs Backpack to cart");
+    
 
     }
     public void checkbikeLightAvailable() {
 
-        bikeLight_Desc_ID.isDisplayed();
-        System.out.println("Bike Light"+bikeLight_Desc_ID.getAttribute("innerText"));
-        Assert.assertEquals("Sauce Labs Bike Light",bikeLight_Desc_ID.getAttribute("innerText"));
+        if(bikeLight_Desc_ID.isDisplayed()) {
+            System.out.println("Desc Available " + bikeLight_Desc_ID.getAttribute("innerText"));
+            Assert.assertEquals("Sauce Labs Bike Light", bikeLight_Desc_ID.getAttribute("innerText"));
+        } else System.out.println("Sauce Labs Bike Light is not Available");
 
     }
 
     public void AddtoCart_BikeLight(){
 
-        AddtoCart_BikeLightID.isDisplayed();
-        AddtoCart_BikeLightID.isEnabled();
-        AddtoCart_BikeLightID.click();
+        if (AddtoCart_BikeLightID.isDisplayed() && AddtoCart_BikeLightID.isEnabled()){
+            AddtoCart_BikeLightID.click();}
+        else System.out.println("Not able to add Sauce Labs Bike Light to cart");
     }
 
     public void checkAndClickShoppingCart() {
 
-        shoppingCartID.isDisplayed();
-        shoppingCartID.isEnabled();
-        shoppingCartID.click();
+     
+
+        if (shoppingCartID.isDisplayed() && shoppingCartID.isEnabled()){
+            shoppingCartID.click();}
+        else System.out.println("Not able to click shopping cart");
 
     }
 
     public void checkShoppingCartBadge() {
 
-        shoppingCartBadgeID.isEnabled();
-        shoppingCartBadgeID.isEnabled();
+       
+        if (shoppingCartBadgeID.isDisplayed() && shoppingCartBadgeID.isEnabled()){
+            System.out.println("shopping Cart Badge is available");}
+        else System.out.println("shopping Cart Badge is not available");
 
 
     }
