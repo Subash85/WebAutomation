@@ -36,8 +36,7 @@ public class TestBase {
         System.out.println(" afterMethod() ");
         if(ITestResult.FAILURE==result.getStatus())
         ReusableFunctions.captureScreenShot(driver,method.getName());
-        else driverManager.quitDriver();
-
+       
     }
 
     @AfterTest
