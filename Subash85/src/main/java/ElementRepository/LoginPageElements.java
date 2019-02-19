@@ -18,21 +18,25 @@ public class LoginPageElements {
     @FindBy(id="password") @CacheLookup private WebElement passWordTxtBox;
     @FindBy(xpath="//*[@id=\"login_button_container\"]/div/form/input[3]") @CacheLookup private WebElement loginBtn;
 
-    public void setUserNameTxtBox(String username) {
-         userNameTxtBox.isEnabled();
-         userNameTxtBox.isDisplayed();
+  public void setUserNameTxtBox(String username) {
+         if (userNameTxtBox.isDisplayed()){
          Assert.assertEquals("Username",userNameTxtBox.getAttribute("placeholder"));
-         userNameTxtBox.sendKeys(username);
+         userNameTxtBox.sendKeys(username);}
+         else System.out.println("username Text box is not Available ");
     }
 
     public void setPassWordTxtBox(String password) {
-        passWordTxtBox.isEnabled();
-        passWordTxtBox.isDisplayed();
+
+       if( passWordTxtBox.isDisplayed()){
         Assert.assertEquals("Password",passWordTxtBox.getAttribute("placeholder"));
-        passWordTxtBox.sendKeys(password);
+        passWordTxtBox.sendKeys(password);}
+             else System.out.println("username Text box is not Available ");
     }
 
     public void clickLoginBtn() {
+        if (loginBtn.isDisplayed() && loginBtn.isEnabled())
         loginBtn.click();
+        else System.out.println("Login button not Working");
+
     }
 }
