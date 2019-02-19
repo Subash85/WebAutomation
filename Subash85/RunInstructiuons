@@ -1,0 +1,13 @@
+
+Instructions to execute the Test case is given below
+
+In Mac , run the test from TestNg.XML (right click and run as testing test)and test results would be available in the test-output folder .
+Chrome driver (Only for Mac)driver is available with package. We can add as many browsers we need to this framework.
+If needed to run in windows please download the Chrome driver for windows and update in the project .
+
+
+Test results will be available in the test-output folder under the name index.html which can be viewed in browser
+
+
+Technology used:-
+Java JDK 1.8,TestNg,Selenium WebDriver

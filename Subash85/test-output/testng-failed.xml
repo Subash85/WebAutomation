@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" configfailurepolicy="continue" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [FIAutomationReport]" parallel="tests">
+  <test thread-count="1" verbose="10" name="WebAutomation(failed)" parallel="tests">
+    <parameter name="password" value="secret_sauce"/>
+    <parameter name="username" value="standard_user"/>
+    <classes>
+      <class name="LoginTest">
+        <methods>
+          <include name="shopItems"/>
+          <include name="initLogin"/>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="checkCartItemList"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- LoginTest -->
+    </classes>
+  </test> <!-- WebAutomation(failed) -->
+</suite> <!-- Failed suite [FIAutomationReport] -->
